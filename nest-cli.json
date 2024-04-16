@@ -4,5 +4,25 @@
   "sourceRoot": "src",
   "compilerOptions": {
     "deleteOutDir": true
+  },
+  "projects": {
+    "@libs/modules": {
+      "type": "library",
+      "root": "libs/modules",
+      "entryFile": "index",
+      "sourceRoot": "libs/modules",
+      "compilerOptions": {
+        "tsConfigPath": "libs/modules/tsconfig.json"
+      }
+    },
+    "@libs/utils": {
+      "type": "library",
+      "root": "libs/utils",
+      "entryFile": "index",
+      "sourceRoot": "libs/utils",
+      "compilerOptions": {
+        "tsConfigPath": "libs/utils/tsconfig.json"
+      }
+    }
   }
 }

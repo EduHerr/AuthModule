@@ -30,7 +30,7 @@ import { AuthService } from './service';
       inject: [getConnectionToken(ConnectionName.AUTH)],
     },
     AuthService,
-    IsUniqueConstraint,
+    // IsUniqueConstraint,
   ],
 })
 export class AuthModule {}

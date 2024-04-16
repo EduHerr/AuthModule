@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "resolveJsonModule": true,
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -8,6 +9,9 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
+    "paths": {
+      "libs/*": ["./libs/*"]
+    },
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,

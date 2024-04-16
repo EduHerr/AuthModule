@@ -14,7 +14,7 @@ export class SignUpDTO{
 
     @IsNotEmpty()
     @IsEmail()
-    @IsUnique()
+    // @IsUnique()
     readonly correo: string;
 
     @IsNotEmpty()
@@ -22,7 +22,7 @@ export class SignUpDTO{
     readonly contrasenia: string;
 
     @IsPhone()
-    @IsUnique()
+    // @IsUnique()
     readonly telefono: string;
 }
 

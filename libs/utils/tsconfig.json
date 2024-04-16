@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "resolveJsonModule": true,
+      "declaration": false,
+      "experimentalDecorators": true,
+      "outDir": "../../dist/libs/utils"
+    },
+    "include": ["./**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+  }
+  
