@@ -4,15 +4,11 @@ import { registerDecorator, ValidationArguments, ValidationOptions, ValidatorCon
 export class IsPhoneConstraint implements ValidatorConstraintInterface {
     validate(value: string, args: ValidationArguments) {
         const regx = new RegExp(`^[0-9]{10}$`);
-        if(!regx.test(value)){
-            throw 'El telefono debe de contener solo numeros y 10 caracteres como minimo y mamximo';
-        }
-
-        return true;
+        return regx.test(value);
     }
 
     defaultMessage(args: ValidationArguments) {
-        return args.property;
+        return 'El telefono debe de contener solo numeros y 10 caracteres como minimo y mamximo';
     }
 }
 

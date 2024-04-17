@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { IsUniqueConstraint } from 'libs/utils/validator/isUnique';
 import { IAuthRepository } from './adapter';
 import { AuthRepository } from './repository';
 import { Connection, Model } from 'mongoose';
@@ -30,7 +29,6 @@ import { AuthService } from './service';
       inject: [getConnectionToken(ConnectionName.AUTH)],
     },
     AuthService,
-    // IsUniqueConstraint,
   ],
 })
 export class AuthModule {}

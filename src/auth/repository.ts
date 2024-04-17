@@ -7,7 +7,9 @@ import { Model } from "mongoose";
 
 @Injectable()
 export class AuthRepository extends Repository<UsuarioDocument> implements IAuthRepository {
-    constructor(@InjectModel(Usuario.name) private readonly user: Model<UsuarioDocument>) {
+    constructor(
+        @InjectModel(Usuario.name) private readonly user: Model<UsuarioDocument>
+    ){
         super(user);
     }
 }

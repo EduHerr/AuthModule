@@ -9,11 +9,11 @@ import {
 @ValidatorConstraint({ name: 'onlyLetters', async: false })
 export class OnlyLettersConstraint implements ValidatorConstraintInterface {
   validate(value: string, args: ValidationArguments) {
-    return /^[A-Za-z\s]+$/.test(value);
+    return /^[A-Za-z]+$/.test(value);
   }
 
   defaultMessage(args: ValidationArguments) {
-    return `El campo ${args.property} solo puede contener letras`;
+    return `${args.property} solo puede contener letras`;
   }
 }
 
